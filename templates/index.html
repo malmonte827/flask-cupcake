@@ -9,19 +9,42 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous"
         />
-        <title>Cupckaes</title>
+        <title>Cupcakes</title>
     </head>
     <body>
-        <h1>Cupcakes</h1>
+        <h1>See all the cupcakes</h1>
 
-        {% for cupcake in cupcakes %}
-        <ul>
-            <li>
-                {{cupcake.name}}
-            </li>
-        </ul>
+        <ul id="cupcakes-list"></ul>
+        
+        <h2>Add a cupcake</h2>
+        
+        <form id="new-cupcake-form">
+          <div>
+            <label for="flavor">Flavor: </label>
+            <input name="flavor" id="flavor">
+          </div>
+        
+          <div>
+            <label for="size">Size: </label>
+            <input name="size" id="size">
+          </div>
+        
+          <div>
+            <label for="rating">Rating: </label>
+            <input type="number" name="rating" id="rating">
+          </div>
+        
+          <div>
+            <label for="image">Image: </label>
+            <input name="image" id="image">
+          </div>
+        
+          <button>Add</button>
+        </form>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="static/app.js"></script>
+        <script src="/static/app.js"></script>
     </body>
 </html>
+
